@@ -1,0 +1,123 @@
+Pra subir um codigo no github:
+
++ novo repositório (web) > nomeRepositório > Público > inicializar sempre com o README > criar 
+
+dentro da pagina do repositorio > clone download, copia o caminho na web do repositório
+
+Abre uma nova pasta no terminal > acessa um CMD > e informa o caminho até a pasta criada > com o link do git clone copiado > git clone (endereço do caminho)
+
+git clone > git add . > git status > git commit -m "nome" > git push origin (branch)
+
+---------------------------------------------------------
+Comandos importantes:
+
+git add . -- Atualiza as modificações dentro do projeto
+
+git status  -- Informa o status de atualização
+
+git commit -m "nome" -- Commita (atualiza as modificações)
+
+git push origin main -- Sobe as pastas atualizadas no git para o github 
+
+git push origin main -f -- quando tudo der errado e vc pensar em desistir, tente subir com este comando 
+
+git log            --Mostra o histórico de commits efetuados
+git log --oneline  --Mostra o historico em uma lnha
+git log -p         --visualiza o historico e o que foi alterado
+
+site  git log cheatsheet/ https://gist.github.com/leocomelli/2545add34e4fec21ec16
+
+.gitignore         --o git deve ignorar este arquivo
+
+git remote         --mostra o local da pasta 
+
+--------------------------------------------------------
+Criando uma nova branch pelo terminal:
+
+git checkout -b "Projeto" -- Cria uma nova Branch 
+
+git checkout "master/main" -- Acessa determinada Branch
+
+git branch -d "Projeto" -- Exclui uma branch
+
+---------------------------------------------------------
+Merge: 
+
+(incluindo um projeto de uma branch para outra)
+
+Acessar o terminal 
+
+Informar o caminho da pasta onde esta o projeto 
+
+-- Acessar: git checkout "nomeBranch"
+
+            checkout master/main
+
+            git merge nomeBranch
+
+            git commit -m "mensagem"
+
+            git push origin master/main
+
+            git rebase nomeBranch (atualiza os commits)
+
+----------------------------------------------------
+
+Traduções 
+
+branch = ramo
+
+------------------------------------------------------
+
+git config --local user.name
+
+--------------------------------------------------------
+
+
+Como criar um repositório Git sem uma cópia dos arquivos (com --bare) para ser utilizado como servidor;
+Como adicionar links para os repositórios remotos, com o comando git remote add;
+
+------------------------------------------
+
+:x fecha o editor 'vim'
+
+
+------------------------------------------------
+
+
+
+para desfazer uma alteração antes de adicioná-la para commit (com git add), podemos utilizar o comando git checkout -- <arquivos>;
+Que, para desfazer uma alteração após adicioná-la para commit, antes precisamos executar o git reset HEAD <arquivos> e depois podemos desfazê-las com git checkout -- <arquivos>;
+Que, para revertermos as alterações realizadas em um commit, o comando git revert pode ser a solução;
+Que o comando git revert gera um novo commit informando que alterações foram desfeitas;
+Que, para guardar um trabalho para retomá-lo posteriormente, podemos utilizar o git stash;
+Que, para visualizar quais alterações estão na stash, podemos utilizar o comando git stash list;
+Que, com o comando git stash apply <numero>, podemos aplicar uma alteração específica da stash;
+Que o comando git stash drop <numero> remove determinado item da stash;
+Que o comando git stash pop aplica e remove a última alteração que foi adicionada na stash;
+Que o git checkout serve para deixar a cópia do código da nossa aplicação no estado que desejarmos:
+git checkout <branch> deixa o código no estado de uma branch com o nome <branch>;
+git checkout <hash> deixa o código no estado do commit com o hash <hash>.
+
+--------------------------------------------------
+
+
+1) Execute o comando git log -p para ver, junto a cada commit, as alterações nele realizadas;
+
+2) Execute agora o comando git log --oneline;
+
+3) Execute o comando git diff {hash do commit de merge com lista}..{hash do último commit realizado};
+
+4) Execute alguma (pequena) alteração no index.html;
+
+5) Execute o comando git diff e veja esta alteração;
+
+6) Desfaça esta última alteração;
+
+7) Execute o comando git tag -a v0.1.0 para criar uma tag no seu código;
+
+8) Execute o comando git push origin v0.1.0 para enviar esta tag para o GitHub;
+
+9) Abra a página do repositório do GitHub que você criou e confira a aba de Releases.
+
+
