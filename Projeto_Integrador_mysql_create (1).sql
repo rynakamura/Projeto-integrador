@@ -11,8 +11,8 @@ CREATE TABLE `Postagens` (
 
 CREATE TABLE `Tema` (
 	`id` INT NOT NULL AUTO_INCREMENT,
-	`materia` varchar(255) NOT NULL,
-	`ano_conteudo` varchar(255) NOT NULL,
+	`materia` varchar(100) NOT NULL,
+	`anoConteudo` varchar(50) NOT NULL,
 	`descricao` varchar(1000) NOT NULL,
 	PRIMARY KEY (`id`)
 );
