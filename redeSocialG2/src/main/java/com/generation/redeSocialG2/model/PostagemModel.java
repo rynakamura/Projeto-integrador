@@ -6,11 +6,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @Table( name = "tb_postagem")
@@ -33,6 +36,14 @@ public class PostagemModel {
 
 	@NotNull
 	private String link_video;
+	
+	@ManyToOne
+	@JsonIgnoreProperties ("postagem")
+	private TemaModel tema;
+	
+	@ManyToOne
+	@JsonIgnoreProperties ("postagem")
+	private UsuarioModel usuario;
 	
 	/*tema_id
 	 * usuario_id */
@@ -77,5 +88,21 @@ public class PostagemModel {
 	public void setLink_video(String link_video) {
 		this.link_video = link_video;
 	}
-	
+
+	public TemaModel getTema() {
+		return tema;
+	}
+
+	public void setTema(TemaModel tema) {
+		this.tema = tema;
+	}
+
+	public UsuarioModel getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(UsuarioModel usuario) {
+		this.usuario = usuario;
+	}
+		
 }
