@@ -23,16 +23,16 @@ public class TemaModel {
 	private long id;
 	
 	@NotNull
-	@Size(min=5,max=100)
+	@Size(max=100)
 	private String materia;
 	
 	
 	@NotNull
-	@Size(min=2,max=50)
+	@Size(max=50)
 	private String anoConteudo;
 	
 	@NotNull
-	@Size(min=10,max=1000)
+	@Size(max=1000)
 	private String descricao;
 	
 	@OneToMany (mappedBy = "tema",cascade = CascadeType.ALL)

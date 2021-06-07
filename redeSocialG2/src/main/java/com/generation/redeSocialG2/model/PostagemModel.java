@@ -24,7 +24,7 @@ public class PostagemModel {
 	private long id;
 	
 	@NotNull
-	@Size (min = 0, max = 255)
+	@Size (max = 255)
 	private String titulo;
 
 	@NotNull
@@ -44,9 +44,6 @@ public class PostagemModel {
 	@ManyToOne
 	@JsonIgnoreProperties ("postagem")
 	private UsuarioModel usuario;
-	
-	/*tema_id
-	 * usuario_id */
 	
 	
 	public long getId() {
