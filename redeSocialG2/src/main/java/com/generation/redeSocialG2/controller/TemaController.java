@@ -23,7 +23,7 @@ import com.generation.redeSocialG2.repository.TemaRepository;
 public class TemaController {
 	
 	@Autowired
-	public TemaRepository repository;
+	private TemaRepository repository;
 	
 	@GetMapping
 	public ResponseEntity<List<TemaModel>> getAll() {
