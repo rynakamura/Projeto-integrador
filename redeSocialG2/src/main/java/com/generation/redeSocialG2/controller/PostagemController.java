@@ -24,7 +24,7 @@ import com.generation.redeSocialG2.repository.PostagemRepository;
 public class PostagemController {
 
 	@Autowired
-	public PostagemRepository repository;
+	private PostagemRepository repository;
 	
 	@GetMapping
 	public ResponseEntity<List<PostagemModel>> getAll(){
