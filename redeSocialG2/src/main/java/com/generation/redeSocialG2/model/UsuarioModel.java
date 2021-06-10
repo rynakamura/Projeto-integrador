@@ -10,7 +10,6 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -30,7 +29,6 @@ public class UsuarioModel {
 	private String email;
 	
 	@NotBlank
-	@Size (min=8, max=20)
 	private String senha;
 	
 	@OneToMany (mappedBy = "usuario",cascade=CascadeType.ALL)

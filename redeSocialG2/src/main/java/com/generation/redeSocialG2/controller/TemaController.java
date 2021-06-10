@@ -18,7 +18,7 @@ import com.generation.redeSocialG2.model.TemaModel;
 import com.generation.redeSocialG2.repository.TemaRepository;
 
 @RestController
-@RequestMapping ("/tema")
+@RequestMapping ("/temas")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class TemaController {
 	
