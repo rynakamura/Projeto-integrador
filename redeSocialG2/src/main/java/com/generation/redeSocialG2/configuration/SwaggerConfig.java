@@ -41,7 +41,7 @@ public class SwaggerConfig {
 	}
 	
 	private static Contact contact1() {
-		return new Contact("Alexander Sousa, Andára Finot, Juliana Ribeiro, Lorrans Matildes Facca"
+		return new Contact("Alexander Sousa, Andára Finot, Juliana Ribeiro, Lorrans Matildes Facca,"
 				+ " Matheus Barbosa, Renato Nakamura",
 				"https://github.com/Renato-Nakamura/Projeto-integrador/",
 				"renato.yukio30@hotmail.com");
