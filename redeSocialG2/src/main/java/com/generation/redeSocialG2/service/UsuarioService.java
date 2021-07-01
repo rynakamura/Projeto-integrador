@@ -61,6 +61,13 @@ public class UsuarioService
 			
 				userLogin.get().setSenha(userDB.get().getSenha());
 				
+				userLogin.get().setId(userDB.get().getId());
+				
+				userLogin.get().setFoto(userDB.get().getFoto());
+				
+				userLogin.get().setTipoUsuario(userDB.get().getTipoUsuario());
+				
+				
 				return userLogin;
 			}
 		}
