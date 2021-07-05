@@ -38,7 +38,7 @@ public class BasicSecurityConfig extends WebSecurityConfigurerAdapter
 		//autorizando sessões para os caminhos informados abaixo
 		http.authorizeRequests()
 		.antMatchers("/usuarios/login").permitAll()
-		.antMatchers("/usuarios").permitAll()
+		.antMatchers("/usuarios/signin").permitAll()
 		//essa linha abaixo deve pedir autorização 
 		//(token) para acessar as demais funcionalidades
 		.anyRequest().authenticated()

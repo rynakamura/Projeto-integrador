@@ -32,7 +32,7 @@ public class UsuarioController
 						.build());
 	}
 	
-	@PostMapping 
+	@PostMapping ("/signin")
 	public ResponseEntity<UsuarioModel> cadastrar (@RequestBody UsuarioModel usuarioCadastro)
 	{
 		Optional<UsuarioModel> user = usuarioService.cadastrarUsuario(usuarioCadastro);
