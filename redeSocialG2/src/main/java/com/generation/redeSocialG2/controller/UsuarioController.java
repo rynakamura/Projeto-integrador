@@ -33,12 +33,12 @@ public class UsuarioController
 	private UsuarioService usuarioService;
 	
 	@GetMapping
-	public ResponseEntity<List<UsuarioModel>> GetAll() {
+	public ResponseEntity<List<UsuarioModel>> getAll() {
 		return ResponseEntity.ok(repository.findAll());
 	}
 	
 	@GetMapping("/{id}")
-	public ResponseEntity<UsuarioModel> GetById(@PathVariable long id) {
+	public ResponseEntity<UsuarioModel> getById(@PathVariable long id) {
 		return repository.findById(id).map(resp -> ResponseEntity.ok(resp)).orElse(ResponseEntity.notFound().build());
 	}
 
@@ -68,8 +68,8 @@ public class UsuarioController
 	}
 	
 	@PutMapping
-	public ResponseEntity<UsuarioModel> Put(@RequestBody UsuarioModel usuario) {
-		return ResponseEntity.ok(repository.save(usuario));
+	public ResponseEntity<UsuarioModel> put(@RequestBody UsuarioModel usuario) {
+		return ResponseEntity.ok(usuarioService.alterarUsuario(usuario));
 	}
 	
 	@DeleteMapping("/{id}")
